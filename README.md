@@ -59,7 +59,10 @@ there are I2c LCD display adaptors out there which can be connected directly to 
 backlight jumper and and a contrast pot. Some of them even feature a backlight switch on bit 3. But more on that later.  
 These adaptors use an PCF8574 or PCA8574 I2C port expander originally introduced by Philips (now [NXP](https://www.nxp.com/) ).
 The only difference is speed. The PCF is rated for 100 kHz and the PCA ist rated for 400 kHz. Although I don't recommend to
-to use chips beyond spec one could try to force the PCF version to 400 kHz. 
+to use chips beyond spec one could try to force the PCF version to 400 kHz.   
+***Attention: Both chips are available with index "A". Index A has different I2C Adress range. Standard is 0x20-0x27, 
+A is 0x38-0x3F***  
+ 
 
 #### i2c transfer speed
 Assuming the Chip is operated at 400 kHz a singele byte write would take two transfers, the addressbyte and the databyte.
